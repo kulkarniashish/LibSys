@@ -1,0 +1,14 @@
+
+		<table class="table">
+			<thead>
+				<th>Id</th>
+				<th>Name</th>
+				<th>DOB</th>
+			</thead>
+			<tr ng-repeat="user in list">
+				<td>{{user.id}}</td>
+				<td>{{user.name}}</td>
+		        <td>{{user.dob}}</td>
+			</tr>
+		</table>
+

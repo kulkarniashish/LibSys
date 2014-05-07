@@ -1,0 +1,18 @@
+'use strict';
+
+angular.module('libSys').controller('MediaPlanListPageCtrl', function($scope, $http) {
+
+    $scope.findAll = function() {
+        $http({
+            method : 'GET',
+            url : './api/plan/media_plan/'
+        }).success(function(data, status, headers, config) {
+            $scope.list = data.content;
+        }).error(function(data, status, headers, config) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+        });
+    };
+
+    $scope.findAll();
+});
