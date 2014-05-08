@@ -10,14 +10,14 @@ config(function($routeProvider) {
 		templateUrl : 'views/pages/BooksListPage.html',
 		controller : 'BooksListController'
 	}).when('/lend', {
-		templateUrl : 'views/widgets/LendBook.html',
-		controller : 'LendBookController'
+		templateUrl : 'views/pages/BookLendPage.html',
+		controller : 'BookLendController'
+	}).when('/lend/history', {
+		templateUrl : 'views/pages/BookLendListPage.html',
+		controller : 'BooksLendListController'
 	}).when('/return', {
-		templateUrl : 'views/widgets/ReturnBook.html',
+		templateUrl : 'views/pages/ReturnBookPage.html',
 		controller : 'ReturnBookController'
-	}).when('/lendHistory', {
-		templateUrl : 'views/widgets/LendHistory.html',
-		controller : 'LendHistoryController'
 	}).when('/user/edit', {
 		templateUrl : 'views/pages/UserEditPage.html',
 		controller : 'UserEditController'

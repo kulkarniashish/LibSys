@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('libSysApp.controllers').controller('UsersListController', function($scope, $http) {
+angular.module('libSysApp').controller('BookLendListController', function($scope, $http) {
 
     $scope.findAll = function() {
         $http({

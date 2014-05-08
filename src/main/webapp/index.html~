@@ -17,7 +17,7 @@
 			    <ul class="dropdown-menu">
       				<li><a ng-href="#/lend">Lend Book</a></li>
 				<li><a ng-href="#/return">Return Book</a></li>
-				<li><a ng-href="#/lendHistory">Lend History</a></li>
+				<li><a ng-href="#/lend/history">Lend History</a></li>
 			    </ul>
 		  </li>
 		</ul>
@@ -43,11 +43,20 @@
 	<script type="text/javascript" src="js/controllers/UsersListController.js"></script>
 	<script type="text/javascript" src="js/controllers/UsersListDirective.js"></script>
 
-	<script type="text/javascript" src="js/controllers/UsersListController.js"></script>
-	<script type="text/javascript" src="js/controllers/UsersListDirective.js"></script>
+	<script type="text/javascript" src="js/controllers/UserEditController.js"></script>
+	<script type="text/javascript" src="js/controllers/UserEditDirective.js"></script>
 
 	<script type="text/javascript" src="js/controllers/BooksListController.js"></script>
 	<script type="text/javascript" src="js/controllers/BooksListDirective.js"></script>
+
+	<script type="text/javascript" src="js/controllers/BookEditController.js"></script>
+	<script type="text/javascript" src="js/controllers/BookEditDirective.js"></script>
+
+	<script type="text/javascript" src="js/controllers/BookLendController.js"></script>
+	<script type="text/javascript" src="js/controllers/BookLendDirective.js"></script>
+
+	<script type="text/javascript" src="js/controllers/BookLendListController.js"></script>
+	<script type="text/javascript" src="js/controllers/BookLendListDirective.js"></script>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">

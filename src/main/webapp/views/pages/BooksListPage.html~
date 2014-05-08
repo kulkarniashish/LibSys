@@ -2,10 +2,10 @@
 	<div class="col-xs-12">
 		<h2 class="page-header">Books List</h2>
 		<div>
-			<a class="btn btn-default btn-primary" ng-href="#">Add New Book</a>
+			<a class="btn btn-default btn-primary" ng-href="#/user/edit">Add New Book</a>
 		</div>
 		<br>
-		<user-list list="list"></book-list>
+		<book-list list="list"></book-list>
 	</div>
 </div>
 

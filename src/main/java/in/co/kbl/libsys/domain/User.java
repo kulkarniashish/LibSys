@@ -4,7 +4,7 @@
 package in.co.kbl.libsys.domain;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,6 +33,17 @@ public class User implements Cloneable, Serializable {
 	
 	private Date dob;
 	
+	public User(){
+		
+	}
+	
+	public User(Long id, String name, Date dob) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.dob = dob;
+	}
+
 	/**
 	 * @return the id
 	 */

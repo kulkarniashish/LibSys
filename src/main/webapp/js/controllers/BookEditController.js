@@ -1,11 +1,9 @@
-/**
- * Created by Chandrahaas on 3/19/14.
- */
 angular.module('libSysApp').controller('BookEditController', function($scope, $http, $routeParams, $location) {
 
 	// id is present, then first get from server
 	// and just assign
 	var bookId = $routeParams.id;
+	console.log(bookId);
 
 	if (!bookId) {
 		// $location.path('/plan/media_plan/list');

@@ -5,10 +5,13 @@ package in.co.kbl.libsys.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -24,6 +27,20 @@ public class Book implements Cloneable, Serializable {
 	 */
 	private static final long serialVersionUID = 1123020866183371426L;
 	
+	public Book(){
+		
+	}
+	
+	public Book(Long id, String bookName, String authorName,
+			String publisherName, User user) {
+		super();
+		this.id = id;
+		this.bookName = bookName;
+		this.authorName = authorName;
+		this.publisherName = publisherName;
+		this.user = user;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -34,6 +51,24 @@ public class Book implements Cloneable, Serializable {
 	
 	private String publisherName;
 	
+	@ManyToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "user_id")
+	private User user;
+	
+	/**
+	 * @return the user
+	 */
+	public User getUser() {
+		return user;
+	}
+
+	/**
+	 * @param user the user to set
+	 */
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	/**
 	 * @return the id
 	 */
