@@ -1,0 +1,19 @@
+
+		<table class="table">
+			<thead>
+				<th>Id</th>
+				<th>UserName</th>
+				<th>BookName</th>
+				<th>LendedDate</th>
+				<th>ReturnedDate</th>
+			</thead>
+			<tr ng-repeat="lendedBook in list">
+				<td>{{lendedBook.id}}</td>
+				<td>{{lendedBook.user.name}}</td>
+		        	<td>{{lendedBook.book.bookName}}</td>
+				<td>{{lendedBook.rentedDate}}</td>
+				<td>{{lendedBook.returnedDate}}</td>
+				<td><a class='btn btn-default btn-xs' href="#/book/edit/?id={{book.id}}">Edit</a></td>
+			</tr>
+		</table>
+

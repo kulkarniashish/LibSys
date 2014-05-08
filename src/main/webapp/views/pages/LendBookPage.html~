@@ -1,0 +1,7 @@
+<div class="row">
+
+	<div class="col-xs-12">
+		<h1 class="page-header">Lend a Book</h1>
+		<book-lending-widget book-lending='bookLending' ></client-io-booking-edit-widget>
+	</div>
+</div>

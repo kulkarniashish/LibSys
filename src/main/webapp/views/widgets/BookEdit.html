@@ -1,0 +1,43 @@
+<div class="row">
+	<div class="col-sm-12">
+		<form role="form" name="bookEditForm" novalidate>
+			<div class="form-group">
+				<div class="form-group row">
+					<div class="col-sm-2">
+						<label>Book Name</label>
+					</div>
+
+					<div class="col-sm-4">
+						<input name='bookName' class="form-control" type="text" data-ng-model="book.bookName" ng-required='true'></div>
+				</div>
+				
+				<div class="form-group row">
+					<div class="col-sm-2">
+						<label>Author Name</label>
+					</div>
+
+					<div class="col-sm-4">
+						<input name='authorName' class="form-control" type="text" data-ng-model="book.authorName" ng-required='true'></div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-sm-2">
+						<label>Publisher Name</label>
+					</div>
+
+					<div class="col-sm-4">
+						<input name='publihserName' class="form-control" type="text" data-ng-model="book.publisherName" ng-required='true'></div>
+				</div>
+				
+				<br>
+				<div class="form-group row">
+					<div class="col-sm-4 col-sm-offset-2">
+						<button data-ng-click='save(book)' ng-disabled="bookEditForm.$invalid" class="btn btn-default btn-success">Save Book</button>
+					</div>
+				</div>
+				
+			</div>
+		</form>
+	</div>
+
+</div>

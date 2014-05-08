@@ -1,0 +1,15 @@
+angular.module('libSysApp').directive('lendedBooksList', function($http,$location) {
+
+	return {
+		restrict : 'AE',
+		scope : {
+			bookLending : "=",
+
+		},
+		templateUrl : 'views/widgets/BooksLendList.html',
+		controller : function($scope) {
+		
+				
+		}
+	};
+}); 

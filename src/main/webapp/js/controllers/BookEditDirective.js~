@@ -1,0 +1,30 @@
+angular.module('libSysApp').directive('bookEdit', function($http,$location) {
+
+	return {
+		restrict : 'AE',
+		scope : {
+			book : '='
+		},
+		templateUrl : 'views/widgets/BookEdit.html',
+		controller : function($scope) {
+			
+			$scope.save = function(book) {
+				console.log(JSON.stringify(book));
+				$http({
+					method : 'POST',
+					url : './api/book/',
+					data : user
+					
+					
+				}).success(function(data, status, headers, config) {
+					console.log('Book saved.');
+					$location.path("/" );
+				}).error(function(data, status, headers, config) {
+					window.alert('error saving book.')
+					// called asynchronously if an error occurs
+					// or server returns response with an error status.
+				});
+			};
+		}
+	};
+}); 

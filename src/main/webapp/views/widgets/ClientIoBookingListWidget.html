@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="col-xs-12">
+		<table class="table">
+			<thead>
+				<th>Id</th>
+				<th>Date</th>
+				<th>Start Date</th>
+				<th>End Date</th>
+				<th>Quantity</th>
+				<th>Gross Rate</th>
+				<th>Gross Cost</th>
+				<th>Net Cost</th>
+				<th>AdServing Rate</th>
+
+
+			</thead>
+			<tr ng-repeat="clientIoBooking in list">
+				<td>{{clientIoBooking.id}} </td>
+				<td>{{clientIoBooking.date | date}}</td>
+		        <td>{{clientIoBooking.dateRange.startDate | date}}</td>
+		        <td>{{clientIoBooking.dateRange.endDate | date}}</td>
+		        <td>{{clientIoBooking.quantity}}</td>
+		        <td>{{clientIoBooking.grossRate}}</td>
+		        <td>{{clientIoBooking.grossCost.value}} {{clientIoBooking.grossCost.currency}}</td>
+		        <td>{{clientIoBooking.netCost.value}} {{clientIoBooking.netCost.currency}}</td>
+		        <td>{{clientIoBooking.adServingRate.value}} {{clientIoBooking.adServingRate.currency}}</td>
+
+
+				<td>
+					<a class='btn btn-default btn-xs' href="#/manage/client_io_booking/edit/?clientIoBookingId={{clientIoBooking.id}}">Edit</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
